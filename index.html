@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rompe cabeza</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+      />
+    </head>
+    <body>
+        <header>
+          <img src="img/icon.png" alt="Icono" id="header-icon" />
+          <h1>Rompecabeza.io</h1>
+          <nav id="container-color">
+            <button class="color btn-black"></button><button class="color btn-white"></button>
+          </nav>
+        </header>
+        <main>
+          <div id="container-info">
+            <div id="titulos">
+              <h2 id="subtitulo">Crea tu propio rompecabeza en un instante!</h2>
+              <h3>
+                Elige entre: <span>JPG</span> , <span>PNG</span>, <span>WEBP</span>
+              </h3>
+            </div>
+            <div id="div-file">
+              <h4>Selecionar imagen</h4>
+              <input
+                type="file"
+                name=""
+                id="file"
+                accept=".jpg,.png,.webp"
+                enctype="multipart/form-data"
+              />
+            </div>
+          </div> 
+         
+        </main> 
+        <section id="container-ronpecabeza">
+           <canvas id="canvas" width="800px" height="500px" ></canvas>
+        </section>
+        <button id="reload"></button>
+        <section id="all-container"> 
+            <footer>Desarrollado por Eliud Pinto</footer>
+           
+        
+        </section>
+    <script src="js/index.js"></script>
+  </body>
+ 
+</html>
