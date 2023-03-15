@@ -7,23 +7,22 @@ let context = CANVAS.getContext("2d");
 CANVAS.style.display = "none";
 let colorInvert = null;
 const BTNS_COLORES = document.querySelectorAll(".color");
-BTNS_COLORES.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    switch (event.target.className) {
-      case "color btn-black":
-        //colocar que cambie el fondo!
-        break;
-      case "color btn-white":
-        //colocar que cambie el fondo!
-        break;
-      default:
-        break;
-    }
-  });
-});
+// BTNS_COLORES.forEach((btn) => {
+//   btn.addEventListener("click", (event) => {
+//     switch (event.target.className) {
+//       case "color btn-black":
+//         //colocar que cambie el fondo!
+//         break;
+//       case "color btn-white":
+//         //colocar que cambie el fondo!
+//         break;
+//       default:
+//         break;
+//     }
+//   });
+// });
 DIV_FILE.addEventListener("click", () => FILE.click());
 FILE.addEventListener("change", (event) => {
-  const FRAGMENT = document.createDocumentFragment();
   const FILE_READER = new FileReader();
   let imgName = event.target.files[0];
   FILE_READER.readAsDataURL(imgName);
@@ -60,8 +59,9 @@ FILE.addEventListener("change", (event) => {
     RELOAD.style.display = "block";
   });
 });
-RELOAD.addEventListener("click", () => (location.href = "../index.html"));
+RELOAD.addEventListener("click", () => (location.href = "./index.html"));
 CANVAS.addEventListener("click", (event) => {
+  const FRAGMENT = document.createDocumentFragment();
   let a = document.createElement("a");
   a.setAttribute("id", "descargar");
   a.setAttribute("href", CANVAS.toDataURL("image/png"));
@@ -69,6 +69,7 @@ CANVAS.addEventListener("click", (event) => {
   a.innerText = "descargar imagen,";
   a.style.position = "absolute";
   a.style.zIndex = "1000000";
-  CONTAINER_ROMPECABEZA.appendChild(a);
+  FRAGMENT.appendChild(a);
+  CONTAINER_ROMPECABEZA.appendChild(FRAGMENT);
 });
 //CANVAS
